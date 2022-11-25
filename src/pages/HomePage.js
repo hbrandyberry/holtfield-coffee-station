@@ -6,7 +6,7 @@ const HomePage = () => {
     return (
         <Container>
             <SubHeader current='Home' />
-            <DisplayList />
+            <DisplayList /> 
         </Container>
     );
 };

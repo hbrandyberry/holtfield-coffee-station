@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import counterReducer from '../features/counter/counterSlice';
-import { imagesReducer } from '../features/menuItems/menuItemsSlice';
+import { galleryImgsReducer } from '../features/galleryImgs/galleryImgsSlice';
+import { imagesReducer } from '../features/images/imagesSlice';
 
 export const store = configureStore({
   reducer: {
-    images: imagesReducer
-    // counter: counterReducer
+    images: imagesReducer,
+    galleryImgs: galleryImgsReducer
   },
 });

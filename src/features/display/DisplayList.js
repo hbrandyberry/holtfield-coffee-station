@@ -1,18 +1,20 @@
 import { useSelector } from "react-redux";
 import { Col, Row } from "reactstrap";
 import DisplayCard from "./DisplayCard";
-import { selectAllImages } from "../menuItems/menuItemsSlice";
+import { selectAllImages } from "../images/imagesSlice";
 
 const DisplayList = () => {
     const images = useSelector(selectAllImages);
 
     return (
-        <Row className='ms-auto'>
-            {images.map((image) => {
+        <Row>
+            {images.map((item, idx) => {
                 return (
-                    <Col md='5' className='m-4' key={image.id}>
-                        <DisplayCard image={image} />
-                    </Col>
+                    item && (
+                        <Col md className='m-1' key={idx}>
+                            <DisplayCard item={item} />
+                        </Col>
+                    )
                 );
             })}
         </Row>
